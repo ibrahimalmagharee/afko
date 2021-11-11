@@ -1,5 +1,7 @@
 @extends('layouts.order')
-
+@section('title')
+    ارسال الطلب
+@endsection
 @section('content')
     <!-- Image and text -->
 
