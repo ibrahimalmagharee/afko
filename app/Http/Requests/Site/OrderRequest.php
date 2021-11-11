@@ -28,6 +28,11 @@ class OrderRequest extends FormRequest
             'last_name' => 'required|max:200',
             'email' => 'required|email|max:200',
             'phone' => 'required|max:20',
+            'country' => 'required|max:100',
+            'city' => 'required|max:100',
+            'identification_number' => 'required|digits_between:1,50|numeric',
+            'address' => 'required|max:200',
+
 
         ];
     }
@@ -44,6 +49,15 @@ class OrderRequest extends FormRequest
             'email.max' => 'يجب ان لا يتجاوز الايميل عن 200 حرف ',
             'phone.required' => 'يجب ادخال رقم الهاتف',
             'phone.max' => 'يجب أن لا يتجاوز رقم الهاتف عن 20 رقم',
+            'country.required' => 'يجب اختيار الدولة',
+            'country.max' => 'يجب أن لا تتجاوز الدولة عن 100 حرف',
+            'city.required' => 'يجب اختيار المدينة ',
+            'city.max' => 'يجب أن لا تتجاوز المدينة عن 100 حرف',
+            'identification_number.required' => 'يجب ادخال رقم الهوية',
+            'identification_number.digits_between' => 'يجب أن لا يتجاوز رقم الهوية عن 50 رقم',
+            'identification_number.numeric' => 'يجب أن يكون نوع رقم الهوية رقم',
+            'address.required' => 'يجب ادخال العنوان',
+            'address.max' => 'يجب أن لا يتجاوز العنوان عن 200 حرف',
 
         ];
 

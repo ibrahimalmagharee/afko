@@ -132,10 +132,10 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>الاسم الأول</th>
-                                            <th>الاسم الأخير</th>
+                                            <th>الاسم</th>
                                             <th>البريد الالكتروني</th>
                                             <th>رقم الهاتف</th>
+                                            <th>العنوان</th>
                                             <th>الحالة</th>
                                         </tr>
                                         </thead>
@@ -144,10 +144,10 @@
                                             @foreach($orders as $order)
                                                 <tr class="bg-success bg-lighten-5">
                                                     <td>{{$order->id}}</td>
-                                                    <td><i ></i>{{$order->first_name}}</td>
-                                                    <td><i ></i>{{$order->last_name}}</td>
+                                                    <td>{{$order->first_name}} {{$order->last_name}}</td>
                                                     <td>{{$order->email}}</td>
-                                                    <td> {{$order->phone}}</td>
+                                                    <td>{{$order->phone}}</td>
+                                                    <td>{{$order->address}}</td>
                                                     <td> @if($order->status == 0) <span class="text-danger">معلق</span> @else <span class="text-success">مكتمل</span> @endif</td>
                                                 </tr>
                                             @endforeach

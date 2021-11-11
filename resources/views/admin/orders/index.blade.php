@@ -83,11 +83,11 @@
                                 <thead>
                                 <tr>
                                     <th width="30%" scope="col">#</th>
-                                    <td width="70%" scope="row" id="id"></td>
+                                    <td scope="row" id="id"></td>
                                 </tr>
                                 <tr>
                                     <th width="30%" scope="col">الاسم الأول</th>
-                                    <td width="70%" scope="row" id="first_name"></td>
+                                    <td scope="row" id="first_name"></td>
                                 </tr>
                                 <tr>
                                     <th scope="col">الأسم الأخير</th>
@@ -98,8 +98,24 @@
                                     <th scope="row" id="email"></th>
                                 </tr>
                                 <tr>
+                                    <th scope="col">الدولة</th>
+                                    <th scope="row" id="country"></th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">المدينة</th>
+                                    <th scope="row" id="city"></th>
+                                </tr>
+                                <tr>
                                     <th scope="col">رقم الهاتف</th>
                                     <th scope="row" id="phone"></th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">رقم الهوية</th>
+                                    <th scope="row" id="identification_number"></th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">العنوان</th>
+                                    <th scope="row" id="address"></th>
                                 </tr>
 
                                 <tr>
@@ -195,7 +211,11 @@
                         $('#first_name').html(data.first_name);
                         $('#last_name').html(data.last_name);
                         $('#email').html(data.email);
+                        $('#country').html(data.country);
+                        $('#city').html(data.city);
                         $('#phone').html(data.phone);
+                        $('#identification_number').html(data.identification_number);
+                        $('#address').html(data.address);
                         $("#pending").attr('data-id', data.id);
                         $("#completed").attr('data-id', data.id);
                         if (data.status === 0){

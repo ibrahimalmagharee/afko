@@ -91,11 +91,24 @@ p {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     width: 682% !important;
+    margin-right: -282px !important;
+
 }
 #phone{
-    width: 139%;
+    padding-left: 225px !important;
 }
 
+.logo-afco {
+    position: relative;
+    top: -98px;
+    float: right;
+    right: 22px;
+    width: 100px;
+    height: 71px;
+}
+body{
+    direction: rtl !important;
+}
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;

@@ -18,7 +18,11 @@ class CreateOrdersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
+            $table->string('country');
+            $table->string('city');
             $table->string('phone');
+            $table->string('identification_number');
+            $table->string('address');
             $table->integer('status')->default(0);
             $table->timestamps();
         });
