@@ -33,7 +33,7 @@
 
             <li class="nav-item @if(request()->url() === route('index.contact_information')) active @endif">
                 <a href="{{route('index.contact_information')}}"><i class="la la-opera"></i>
-                    <span class="menu-title" data-i18n="nav.add_on_drag_drop.main">صورة الخلفية </span>
+                    <span class="menu-title" data-i18n="nav.add_on_drag_drop.main">معلومات التواصل</span>
                     <span class="badge badge badge-info badge-pill float-right mr-2">{{\App\Models\ContactInformation::count()}}</span>
                 </a>
 

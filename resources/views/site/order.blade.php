@@ -6,9 +6,12 @@
     <!-- Image and text -->
 
 
-	<section class="ftco-section img bg-hero" style="background-image: url('{{$background->getImage($background->photo) }}');">
+	<section class="ftco-section img bg-hero" @isset($background) style="background-image: url('{{$background->getImage($background->photo) }}');" @endisset >
         <a class="logo-afco" href="#">
-            <img src="{{$logo->getImage($logo->photo) }}" style="width: inherit; height: inherit" class="d-inline-block align-top" alt="ddn">
+            @isset($logo)
+                <img src="{{$logo->getImage($logo->photo) }}" style="width: inherit; height: inherit" class="d-inline-block align-top" alt="ddn">
+
+            @endisset
 
         </a>
         <div class="container">
@@ -186,38 +189,41 @@
                             <div class="col-lg-5 d-flex align-items-stretch">
                                 <div class="info-wrap w-100 p-5">
                                     <h3 class="mb-4 float-right">الطلب</h3>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
+                                    @isset($contact_information)
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-map-marker"></span>
+                                            </div>
+                                            <div class="text pl-4">
+                                                <p class="text-right pr-3"><span> العنوان :</span> {{$contact_information->address}}</p>
+                                            </div>
                                         </div>
-                                        <div class="text pl-4">
-                                            <p class="text-right pr-3"><span> العنوان :</span> {{$contact_information->address}}</p>
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-phone"></span>
+                                            </div>
+                                            <div class="text pl-4">
+                                                <p class="text-right pr-3"><span> رقيم الهاتف :</span> <a href="tel://1234567920"> {{$contact_information->phone}}</a></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-paper-plane"></span>
+                                            </div>
+                                            <div class="text pl-4">
+                                                <p class="text-right pr-3"><span> البريد الالكتروني :</span> <a href="mailto:info@yoursite.com"> {{$contact_information->email}}</a></p>
+                                            </div>
                                         </div>
-                                        <div class="text pl-4">
-                                            <p class="text-right pr-3"><span> رقيم الهاتف :</span> <a href="tel://1234567920"> {{$contact_information->phone}}</a></p>
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-globe"></span>
+                                            </div>
+                                            <div class="text pl-4">
+                                                <p class="text-right pr-3"><span> الموقع الالكتروني </span> <a href="#"> {{$contact_information->website}}</a></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="text pl-4">
-                                            <p class="text-right pr-3"><span> البريد الالكتروني :</span> <a href="mailto:info@yoursite.com"> {{$contact_information->email}}</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-globe"></span>
-                                        </div>
-                                        <div class="text pl-4">
-                                            <p class="text-right pr-3"><span> الموقع الالكتروني </span> <a href="#"> {{$contact_information->website}}</a></p>
-                                        </div>
-                                    </div>
+                                        @endisset
+
                                 </div>
                             </div>
 
@@ -248,7 +254,15 @@
                     </div>
                 </div>
             </div>
+
+
 		</div>
+            <div class="jlzTty" >
+                <a href="https://wa.me/+966566276447" target="_blank">
+                    <img src="{{asset('assets/front/images/Watsapp2.png')}}" style="width: 100%;height: 100%;fill: rgb(255, 255, 255);stroke: none;">
+                </a>
+
+        </div>
 	</section>
 
 @endsection

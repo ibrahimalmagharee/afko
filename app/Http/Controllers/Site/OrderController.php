@@ -17,6 +17,7 @@ class OrderController extends Controller
         $background = Background::first();
         $logo = Logo::first();
         $contact_information = ContactInformation::first();
+
         return view('site.order', compact('background', 'logo', 'contact_information'));
     }
 
